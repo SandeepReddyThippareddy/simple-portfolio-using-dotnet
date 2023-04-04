@@ -1,0 +1,71 @@
+﻿@model SandeepThippareddy.Dtos.ContactDto
+
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> contact <span> me </span> </h1>
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>sandeepreddythippareddy@gmail.com</p>
+            <p>sandeepthippareddy@hotmail.com</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>Number</h3>
+            <p>+91-8500871029</p>
+            <p>+91-6300256651</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Address</h3>
+            <p>Electronic City, Phase-1, Bangalore, 560100</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <form asp-action="Index" asp-controller="Contact">
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label required-field"></label>
+                <input asp-for="Name" class="form-control box" id="userName" autocomplete="off" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label required-field"></label>
+                <input asp-for="Email" class="form-control box" id="userName" autocomplete="off" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label required-field"></label>
+                <input asp-for="PhoneNumber" class="form-control box" id="userName" autocomplete="off" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Message" class="control-label required-field"></label>
+                <input asp-for="Message" class="form-control box" id="userName" autocomplete="off" />
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+
+            <button class="button-85 btn-lg" id="customButtons" type="submit">Reach Out</button>
+        </form>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15560.156288663931!2d77.64941282272926!3d12.840751725499441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c84c653f867%3A0xa2b7177c72352af9!2sElectronics%20City%20Phase%201%2C%20Electronic%20City%2C%20Bengaluru%2C%20Karnataka%20560100!5e0!3m2!1sen!2sin!4v1665238632318!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+</section>

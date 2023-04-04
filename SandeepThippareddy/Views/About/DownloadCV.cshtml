@@ -1,0 +1,49 @@
+﻿@model SandeepThippareddy.Dtos.DownloaderDto
+
+@{
+    ViewData["Title"] = "Downloads";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> Required <span> Deatils </span> </h1>
+
+    <div class="d-flex row align-items-center">
+        <div class="flex-grow-1 ms-3">
+            <form asp-action="DownloadCV" asp-controller="About" style="color:black;">
+
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label required-field"></label>
+                    <input asp-for="Name" class="form-control box" id="userName" autocomplete="off" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label required-field"></label>
+                    <input asp-for="Email" class="form-control box" id="userName" autocomplete="off" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label required-field"></label>
+                    <input asp-for="PhoneNumber" class="form-control box" id="userName" autocomplete="off" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <button class="button-85 btn-group-sm" id="customButtons" type="submit">Download <span class="fas fa-download"></span></button>
+            </form>
+        </div>
+        <div class="flex-shrink-0">
+
+            <div class="icons-container" style="transform: rotate(-9deg);">
+                <div class="icons">
+                    <i class="fas fa-lock"></i>
+                    <h3>Privacy Statement</h3>
+                    <p style="text-transform:none">I will ensure the maximum safety to your data/credentials.</p>
+                    <p style="text-transform:none">Please feel free to post your data to download my CV.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

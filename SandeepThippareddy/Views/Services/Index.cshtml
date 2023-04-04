@@ -1,0 +1,332 @@
+﻿@{
+    ViewData["Title"] = "Services";
+}
+
+<style>
+    .servicesContainer {
+        background: #f8f9fa;
+    }
+    .openBlockServices{
+        background: #f8f9fa;
+    }
+
+        .servicesContainer h3 {
+            color: #fff;
+        }
+
+    .w3_head {
+        text-align: center;
+        color: var(--heading);
+        margin: 0 0 1em;
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .agileits_servicesContainer_grids {
+        margin: 0em 0 3em;
+    }
+
+    .agileits_servicesContainer_grid {
+        padding: 2em;
+        text-align: left;
+        background: #fff;
+        transition: .5s ease-in;
+        -webkit-transition: .5s ease-in;
+        -moz-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
+        -ms-transition: .5s ease-in;
+    }
+
+        .agileits_servicesContainer_grid h5 {
+            font-size: 1.5em;
+            margin: 0em 0 .5em;
+        }
+
+        .agileits_servicesContainer_grid p {
+            color: black;
+            line-height: 2em;
+            font-size: 16px;
+        }
+
+    .customTop {
+        transition: all 300ms ease-in-out;
+        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height:400px;
+
+    }
+
+        .customTop:before {
+            bottom: 0;
+            right: 0;
+        }
+
+        .customTop:after, .customTop:before {
+            content: '';
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            position: absolute;
+            transition: all 800ms ease-in-out;
+            border-radius: 8px;
+        }
+
+        .customTop:after {
+            top: 0;
+            left: 0;
+        }
+
+        .customTop:hover:after, .customTop:hover:before {
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+        }
+
+    .customBottom h5 {
+        margin: 0em 0 .5em;
+        color: var(--heading);
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+        text-transform: capitalize;
+        transition: .5s all;
+        -webkit-transition: .5s all;
+        -o-transition: .5s all;
+        -moz-transition: .5s all;
+        -ms-transition: .5s all;
+    }
+
+    .customBottom p {
+        color: black;
+        font-size: 17px;
+        line-height: 26px;
+        margin: 0;
+    }
+
+    .customBottom {
+        padding: 2em 1em;
+        border: none;
+        background: #fff;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .customBottom:hover{
+        background:white;
+
+    }
+    .customTop:hover {
+        cursor: default;   
+    }
+
+    .service_grid_btm_left img {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        width:100%;
+        height:200px;
+    }
+
+    .customTop:hover .customBottom i {
+        color: black;
+        box-shadow:unset;
+        transition: .5s all;
+        -webkit-transition: .5s all;
+        -o-transition: .5s all;
+        -moz-transition: .5s all;
+        -ms-transition: .5s all;
+    }
+
+    .customBottom span.fa {
+        display: inline-block;
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: forestgreen;
+    }
+
+    .openBlockServices h4.mission {
+  color: var(--heading);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-top: 25px; }
+
+.openBlockServices h3.head-title {
+  color: var(--heading);
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 700;
+  margin-bottom: 55px;
+  text-align: center; }
+
+.openBlockServices .open-description a {
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 700;
+  color: black; }
+
+.openBlockServices .open-description a:hover {
+  color: forestgreen; }
+
+.openBlockServices .open-description p {
+  color: black;
+  font-size: 17px;
+  line-height: 26px;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+.openBlockServices .icon-holder span.fa {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  transition: all 0.3s ease;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 26px; }
+
+.openBlockServices .card {
+    color:black;
+  padding: 40px 25px;
+  position: relative;
+  border: none;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  border-radius: 8px; }
+
+.openBlockServices .card:hover {
+  background: white;
+  transition: .4s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s; }
+
+.openBlockServices .card .icon-holder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -40px;
+  background: forestgreen;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  transition: all 0.3s ease;
+  border-radius: 100%;
+  color: black;
+  font-size: 26px;
+  margin: 0 auto; 
+}
+
+    .bott-img .icon-holder > .service-icon {
+        line-height: 70px;
+    }
+
+</style>
+<section class="service" id="service">
+
+    <h1 class="heading"> my <span>Services</span></h1>
+
+    <div class="servicesContainer py-5" id="classes">
+        <div class="container py-lg-5 py-md-3">
+            <div class="services-block_grids_bottom">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 service_grid_btm_left md-5">
+                        <div class="customTop">
+                            <div class="customBottom">
+                                <span class="fa fa-desktop editContent" aria-hidden="true"></span>
+                                <h5 style="color:black;">Web Development</h5>
+                                <p>Good at designing and developing SPA and Enterprise applications with rich UI.</p>
+                            </div>
+                            <img src="~/Images/WebDev.png" alt=" " class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 service_grid_btm_left md-5 mt-md-0 mt-sm-5 mt-4">
+                        <div class="customTop">
+                            <div class="customBottom">
+                                <span class="fa fa-code editContent" aria-hidden="true"></span>
+                                <h5 style="color:black;">Backend/API</h5>
+                                <p>Expertise in developing reliable API's with advanced security.</p>
+                            </div>
+                            <img src="~/Images//BackendDev.jpg" alt=" " class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 service_grid_btm_left md-5 mt-lg-0 mt-sm-5 mt-4">
+                        <div class="customTop">
+                            <div class="customBottom">
+                                <span class="fa fa-bug editContent" aria-hidden="true"></span>
+                                <h5 style="color:black;">Unit Testing</h5>
+                                <p>Developing of UT's to ensure maximum correctness of business logic.</p>
+                            </div>
+                            <img src="~/Images//UnitTest.jpg" alt=" " class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 service_grid_btm_left md-5 mt-lg-0 mt-sm-5 mt-4">
+                        <div class="customTop">
+                            <div class="customBottom">
+                                <span class="fa fa-cloud editContent" aria-hidden="true"></span>
+                                <h5 style="color:black;">Cloud Native Development</h5>
+                                <p>Building and running applications to take advantage of the distributed computing offered by the cloud delivery model.</p>
+                            </div>
+                            <img src="~/Images/Cloud.png" alt=" " class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- services block3 -->
+    <h1 class="heading"> Expertise <span>In</span></h1>
+
+    <div class="openBlockServices py-5">
+        <div class="container py-lg-3">
+            <div class="row mt-5 pt-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <div class="icon-holder">
+                            <span class="fa fa-laptop service-icon" aria-hidden="true"></span>
+                        </div>
+                        <h4 class="mission">Web design</h4>
+                        <div class="open-description">
+                            <p>Design and Development of web applications with Rich UI Elements.</p>
+                            <a href="#read" class="editContent">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-5 pt-md-0 pt-3">
+                    <div class="card text-center">
+                        <div class="icon-holder">
+                            <span class="fa fa-pen service-icon" aria-hidden="true"></span>
+                        </div>
+                        <h4 class="mission">Technical Blog's</h4>
+                        <div class="open-description">
+                            <p>Coming Soon...</p>
+                            <a href="#read" class="editContent">Read More</a>
+                        </div>
+                    </div>
+                </div>
+@*                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5 pt-lg-0 pt-3">
+                    <div class="card text-center">
+                        <div class="icon-holder">
+                            <span class="fa fa-adjust service-icon" aria-hidden="true"></span>
+                        </div>
+                        <h4 class="mission">SEO</h4>
+                        <div class="open-description">
+                            <p>Maecenas sodales eu commodo ligula eget dolor dolor sit amet ligula</p>
+                            <a href="#read" class="editContent">Read More</a>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <!-- //services block3 -->
+</section>

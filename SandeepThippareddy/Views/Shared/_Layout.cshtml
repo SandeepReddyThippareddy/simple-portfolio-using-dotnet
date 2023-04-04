@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SandeepThippareddy</title>
+
+    <!--Site Javascript and CSS files-->
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/site.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/sweetalert/sweetalert2.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="~/lib/sweetalert/sweetalert2.min.css" />
+
+</head>
+<body>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <header>
+        <a asp-controller="Home" asp-action="Index"><span class="logo"> <span>Sandeep</span> Thippareddy </span></a>
+
+        <nav class="navbarCustom" id="sidebar-container">
+
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="About" asp-action="Index">About</a>
+            <a asp-controller="Services" asp-action="Index">Services</a>
+            <a asp-controller="Experience" asp-action="Index">Experience</a>
+            @*   <a asp-controller="Portfolio" asp-action="Index">Portfolio</a>*@
+            <a asp-controller="Contact" asp-action="Index">Contact</a>
+
+            <a data-toggle="collapse" id="collapsable" href="#" role="button" aria-expanded="false">
+                Blog's <span class="fa fa-caret-down pl-2"></span>
+            </a>
+
+            <div class="collapse" id="collapseExample">
+                <a asp-controller="TechnicalBlogs" asp-action="Index">Technical</a>
+                <a asp-controller="PersonalBlogs" asp-action="Index">Personal</a>
+            </div>
+        </nav>
+
+        <div class="follow">
+            <a href="https://twitter.com/Sai_Thippareddy" target="_blank" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    </header>
+
+
+    <div class="container-fluid">
+        <main role="main">
+            <div class="theme">
+                <span class="fa fa-sun" id="themeIcon"></span>
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer" class="text-center text-lg-start">
+        <div class="text-center p-3">
+            <p>© 2022 Copyright</p>
+            <a asp-controller="Home" asp-action="Index">Designed, Developed and Maintained by Sandeep Thippareddy</a>
+        </div>
+    </footer>
+
+    @await Html.PartialAsync("_notificationPartial")
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
